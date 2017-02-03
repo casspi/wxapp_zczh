@@ -3,7 +3,7 @@ Page({
   data:{  
         good:[],//商品
         goodUrl:'/m.php?g=api&m=wxshop&a=goods&goods_id=',//商品
-        formData: '',
+        formData:'',
         index:0,
         num:1,
         buy:{},
@@ -88,7 +88,29 @@ Page({
     })  
   },  
   confirm_one: function(e) {  
-    console.log(e);  
+    console.log(e);
+    var that=this
+    //确认---->提交订单
+    wx.request({  
+        url:app.globalData.serverUrl+that.data.orderUrl,
+        data:{
+          phone:that.data.formData.number,
+          user:that.data.formData.name,
+          address:that.data.formData.address,
+          goods_id:app.globalData.requestId,
+          num:that.data.num,
+          extra:that.data.formData.txt
+        }, 
+        method: 'POST', 
+        header: {  
+            'Content-Type': "application/x-www-form-urlencoded" 
+        },  
+        success: function(res) {  
+            console.log("提交订单成功")
+            console.log(res.data)
+            
+        }  
+      })    
     this.setData({  
       modalHidden: true,  
       toast1Hidden:false,  
@@ -118,6 +140,9 @@ Page({
   formSubmit:function(e){
     var formData = e.detail.value
     var that=this
+    that.setData({ 
+      formData:formData
+    })
     console.log(typeof formData.number)
     console.log(that.data.num+"----"+formData)
     // app.requestId
@@ -127,26 +152,7 @@ Page({
           notice_str:'请填写完整表单信息', 
         })  
     }else{//电话、姓名、地址都不为空
-      wx.request({  
-        url:app.globalData.serverUrl+that.data.orderUrl,
-        data:{
-          phone:formData.number,
-          user:formData.name,
-          address:formData.address,
-          goods_id:app.globalData.requestId,
-          num:that.data.num,
-          extra:formData.txt
-        }, 
-        method: 'POST', 
-        header: {  
-            'Content-Type': "application/x-www-form-urlencoded" 
-        },  
-        success: function(res) {  
-            console.log("提交订单成功")
-            console.log(res.data)
-            
-        }  
-      })  
+      
       that.modalTap(); 
     }  
   },
