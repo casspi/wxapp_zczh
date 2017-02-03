@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/goods/goods"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3b3b3b",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"#fff"
+  },
+  "debug": false
+}
