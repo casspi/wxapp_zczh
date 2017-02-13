@@ -20,24 +20,39 @@ Page({
       darp:4,//显示商品数量
       n:1,//倍数
       par:true,
-       serverSrc:app.globalData.serverUrl
+      serverSrc:app.globalData.serverUrl
   },
   //跳转到详情页页
   detailgoods:function(e){
-  var id=e.currentTarget.id;
-  app.globalData.requestId=id;
-  wx.navigateTo({
-    url: '../goods/goods',
-    success: function(res){
-      // success
-    },
-    fail: function() {
-      // fail
-    },
-    complete: function() {
-      // complete
-    }
-  })
+    var id=e.currentTarget.id;
+    app.globalData.requestId=id;
+    wx.navigateTo({
+      url: '../goods/goods',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+  },
+  //跳转个人中心
+  goPer:function(){
+    wx.navigateTo({
+      url: '../personal/personal',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   }, 
   //事件处理函数
   // bindViewTap: function() {
@@ -133,8 +148,7 @@ Page({
       });
     }
     console.log(that.data.par)
-    // 网络请求
-    // console.log(goodn)
+    
   }
   // 分享
   // onShareAppMessage: function () {

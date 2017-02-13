@@ -34,28 +34,59 @@ Page({
       })
     })
   },
-  // 返回首页
+// 返回首页
 back:function(){
   wx.navigateBack({
   delta: 1
   })
-  
+},
+//预览大图
+toBigpic:function(e){
+  var id=e.currentTarget.id*1
+  app.globalData.pic_index=id
+  wx.navigateTo({
+    url: '../bigpic/bigpic',
+    success: function(res){
+      // success
+    },
+    fail: function() {
+      // fail
+    },
+    complete: function() {
+      // complete
+    }
+  })
 },
 //立即购买
 submit:function(){
-  wx.navigateTo({
-    url: '../order/order',
-    success: function(res){
-    // success
-  },
-  fail: function() {
-    // fail
-  },
-  complete: function() {
-    // complete
-  }
-})
+    wx.navigateTo({
+      url: '../order/order',
+      success: function(res){
+      // success
+    },
+    fail: function() {
+      // fail
+    },
+    complete: function() {
+      // complete
+    }
+  })
 },
+//跳转个人中心
+  goPer:function(){
+    wx.navigateTo({
+      url: '../personal/personal',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+  }, 
 // buy:function(){
 //    this.setData({
 //      buyCar:"block"

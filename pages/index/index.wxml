@@ -5,14 +5,16 @@
             <image src="{{serverSrc+item.slide_pic}}"  class="slide-image" id="{{item.goods_id}}" bindtap="detailgoods"/>
       </swiper-item>
     </block> 
-    
 </swiper>
 <view class="warp clearfix">
     <view class="goods" wx:for="{{goods.data}}" wx:for-index="idx" >
-        <view wx:if="{{idx<=12}}" id="{{item.goods_id}}" bindtap="detailgoods">
+        <view  id="{{item.goods_id}}" bindtap="detailgoods">
             <image src="{{serverSrc}}{{item.goods_pic}}"></image>
             <text class="title">{{item.goods_name}}</text>
-            <text class="price">{{item.goods_price}}</text><span>原价：{{item.default_price}}</span>
+            <text class="price">￥{{item.goods_price}}</text><span>原价：￥{{item.default_price}}</span>
         </view>  
     </view>
+</view>
+<view class="personal" bindtap="goPer">
+    <image src="../../image/per.png"></image>
 </view>

@@ -13,11 +13,60 @@ Page({
         modalHidden: true,  
         modalHidden2: true,  
         notice_str: '',
-        serverSrc:app.globalData.serverUrl//服务器地址         
+        serverSrc:app.globalData.serverUrl,//服务器地址
+        order:[],
+        address:{},//默认地址         
   },
-  onLoad: function () {
+  onShow: function () {
     var that = this
+    if(app.globalData.order_k){
+        //发送请求获取订单
+      wx.request({
+        url: 'https://www.520hhy.cn/m.php?g=api&m=wxshop&a=my_order&limit=10&',
+        data: {
+          sess_id:wx.getStorageSync(
+                 'sess_id'
+                ),
+           type:"no_handle"  
+        },
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // 遍历所有订单，通过order_id获取当前订单
+          console.log(res.data.data)
+          var _data=res.data.data;
+          for(var i=0;i<_data.length;i++){
+            console.log(_data[i])
+            if(_data[i].order_id==app.globalData.order_id){
+                app.globalData.choose_address={
+                  address:_data[i].address,
+                  phone:_data[i].phone,
+                  receiver: _data[i].user,
+                  num:_data[i].goods_num*1,
+                }
+            }
+          }
+          that.setData({
+            num:app.globalData.choose_address.num,
+            address:app.globalData.choose_address//选择的地址代替更改默认地址
+          })
+          app.globalData.order_k=false;//改为默认
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    }else{
+      that.setData({
+        address:app.globalData.choose_address//选择的地址代替更改默认地址
+      })
+    }
+    console.log(app.globalData.choose_address)
     //获取商品信息
+    console.log(app.globalData.requestId+"---"+app.globalData.choose_address)
     wx.request({
       url: app.globalData.serverUrl+that.data.goodUrl+app.globalData.requestId, //详情页数据
       header: {
@@ -31,19 +80,21 @@ Page({
         console.log(that.data.good)   
       }
     })
-    // wx.request({
-    //   url: app.globalData.serverUrl+'/m.php?g=api&m=wxshop&a=send_order', //购物车
-    //   header: {
-    //       'content-type': 'application/json'
-    //   },
-    //   success: function(res) {
-    //     console.log(res.data)
-    //     that.setData({
-    //       buy:res.data.data
-    //     })
-    //     console.log(that.data.buy)   
-    //   }
-    // })
+    //获取订单信息
+    wx.request({
+      url: app.globalData.serverUrl+'m.php?g=api&m=wxshop&a=my_order&limit=10', //购物车
+      header: {
+          'content-type': 'application/json'
+      },
+      data:{
+        sess_id:wx.getStorageSync(
+                 'sess_id'
+                )
+      },
+      success: function(res) {
+        console.log(res.data)
+      }
+    })
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
       //更新数据
@@ -90,9 +141,9 @@ Page({
   confirm_one: function(e) {  
     console.log(e);
     var that=this
-    //确认---->提交订单
+    //确认---->提交订单，发送到服务器
     wx.request({  
-        url:app.globalData.serverUrl+that.data.orderUrl,
+        url:app.globalData.serverUrl+that.data.orderUrl+'&sess_id='+wx.getStorageSync('sess_id'),
         data:{
           phone:that.data.formData.number,
           user:that.data.formData.name,
@@ -124,7 +175,31 @@ Page({
       toast1Hidden:false,  
       notice_str: '取消成功'  
     });  
-  },  
+  },
+  //跳转个人中心
+  goPer:function(){
+    wx.navigateTo({
+      url: '../personal/personal',
+      success: function(res){
+        // success
+      }
+    })
+  },
+  //去选择地址
+  goAdr:function(){
+    wx.navigateTo({
+      url: '../address/address',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+  },   
   //弹出提示框  
   // modalTap2: function(e) {  
   //   this.setData({  
@@ -152,7 +227,7 @@ Page({
           notice_str:'请填写完整表单信息', 
         })  
     }else{//电话、姓名、地址都不为空
-      
+      //弹出提示框
       that.modalTap(); 
     }  
   },

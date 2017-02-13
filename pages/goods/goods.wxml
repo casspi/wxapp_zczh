@@ -12,8 +12,8 @@
 </view>
 <view class="gs_dt">
 <text>商品详情</text>
-<view wx:for="{{good.main}}">
-    <image src="{{item}}"></image>
+<view wx:for="{{good.main}}" bindtap="toBigpic" id="{{index}}">
+    <image src="{{item}}" ></image>
 </view>
 </view>
 <view style="height:82rpx;"></view>
@@ -31,3 +31,6 @@
 <!--<view class="buyCar" style="display:{{buyCar}}" >
     <span class="submit" bindtap="submit">提交订单</span>
 </view>-->
+<view class="personal" bindtap="goPer">
+    <image src="../../image/per.png"></image>
+</view>

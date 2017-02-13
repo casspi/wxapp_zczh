@@ -17,7 +17,7 @@ swiper {height: 750rpx;}
 .contact span{display: block;width:70rpx;height:80rpx;border-radius: 10%;padding-left: 10rpx;background-color:#f60;float:right;margin-right: 80rpx;font-size: 12px;color:#fff }
 .contact span contact-button {margin: 0 auto}
 /*详情图*/
-.gs_dt {width:670rpx;padding:0 40rpx; }
+.gs_dt {width:670rpx;padding:0 40rpx;}
 .gs_dt text{line-height: 80rpx;font-size:36rpx;font-family: "微软雅黑";border-bottom: 1px #eee solid;width: 100%;display: block;margin-bottom:10rpx;}
 .gs_dt image{width: 100%;display: block}
 /*底部按钮*/
