@@ -1,0 +1,9 @@
+page{font-family: "微软雅黑";}
+.warp{background-color: #282828;color: #fff;margin-top:40rpx;}
+.title{font-size:32rpx;line-height: 32rpx;}
+.order{display: flex;flex-direction: row;padding:40rpx 20rpx;}
+.order .pic image{width: 168rpx;height: 168rpx;margin-right: 20rpx;}
+.order .info{flex:1;display: flex;flex-direction: column;font-size: 28rpx;line-height: 40rpx;}
+.price{display: flex;flex-direction: row;font-size: 32rpx;justify-content:space-between;line-height: 40rpx;padding:0 20rpx }
+.price .red{color:red}
+.btn{margin-top: 400rpx;padding:0 20rpx}

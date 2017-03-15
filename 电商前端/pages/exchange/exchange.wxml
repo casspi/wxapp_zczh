@@ -1,0 +1,41 @@
+<view class="header">
+<image src="../../images/dollar.png"></image>
+<text class="points">累计积分：<text class="points_num">6800积分</text></text>
+</view>
+<view class="bor"></view>
+<view class="list">
+    <view class="item">
+        <image src="../../images/good_pic.png"></image>
+        <view class="info">
+            <text class="title">良品铺子猪肉脯</text>
+            <text class="price">800积分</text>
+            <text class="btn"  bindtap="exchange">兑换</text>
+        </view>
+    </view>
+    <view class="item">
+        <image src="../../images/good_pic.png"></image>
+        <view class="info">
+            <text class="title">良品铺子猪肉脯</text>
+            <text class="price">800积分</text>
+            <text class="btn"  bindtap="exchange">兑换</text>
+        </view>
+    </view>
+    <view class="item">
+        <image src="../../images/good_pic.png"></image>
+        <view class="info">
+            <text class="title">良品铺子猪肉脯</text>
+            <text class="price">800积分</text>
+            <text class="btn" bindtap="exchange">兑换</text>
+        </view>
+    </view>
+</view>
+<!--模态层-->
+<view class="modal" style="height:100%;width:100%" hidden="{{key}}">
+    <view class="box">
+        <text class="txt">你确定要兑换该商品？</text>
+        <view class="btns">
+            <text class="del" bindtap="del">取消</text>
+            <text class="confirm" bindtap="confirm">确定</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+page{background-color:#fafafa}
+.item{margin-bottom: 22rpx;}
+.item .title{background-color: #ffffff;padding-top: 8rpx;height: 75rpx;line-height: 75rpx;padding-left:24rpx;padding-right: 30rpx;display: flex;flex-direction: row;justify-content: space-between;color: #666666;font-size: 24rpx;}
+.item .goods .good{display: flex;flex-direction: row;padding:12rpx 0 14rpx 26rpx;border-bottom:9rpx #fff solid; }
+.item .goods .good:last-child{border: none}
+.item .goods .good image{width: 104rpx;height: 104rpx;margin-right: 21rpx;}
+.item .goods .good .info{display: flex;flex-direction: column;}
+.item .goods .good .info .name{font-size: 30rpx;line-height: 42rpx;}
+.item .goods .good .info .msg{font-size: 24rpx;color:#999999}
+.total{display: flex;flex-direction: row;justify-content: space-between;padding-right:18rpx;padding-left: 26rpx;height: 98rpx;background-color: #ffffff;line-height: 98rpx; font-size: 28rpx;}
+.total .price{color:#666666}
+.total .price .font1{color:#ffab18 }
+.total .btns{display: flex;padding-top:14rpx;}
+.total .btns .btn{border: 2rpx #999999 solid;line-height:66rpx;width: 158rpx;text-align: center;height: 66rpx;margin-right: 23rpx;border-radius: 4rpx;}

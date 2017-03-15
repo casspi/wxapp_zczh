@@ -1,0 +1,60 @@
+<view class="header">
+    <image src="../../images/tick.png"></image>
+</view>
+<view class="content">
+    <image src="../../images/top.png" class="top"></image>
+    <view class="info">
+        <view class="part1">
+            <text class="title">欢迎光临</text>
+            <text class="title">北京物美光大店1067</text>
+            <text class="data col">日期：<text class="font1">2017-02-16　　12:00</text></text>
+            <text class="ord_num col">单号：<text class="font1">003253</text></text>
+            <view class="msg col">
+                <text>货号</text>
+                <text>数量*单价</text>
+                <text>金额</text>
+            </view>
+        </view>
+        <view class="part2">
+            <view class="item">
+                <text class="name">伞塔240g牛肉面调料</text>
+                <view class="msg">
+                    <text class="font1">264570</text>
+                    <text class="font1">1*9.99</text>
+                    <text class="font1">9.99</text>
+                </view>
+            </view>
+            <view class="item">
+                <text class="name">伞塔240g牛肉面调料</text>
+                <view class="msg">
+                    <text class="font1">264570</text>
+                    <text class="font1">1*9.99</text>
+                    <text class="font1">9.99</text>
+                </view>
+            </view>
+            <view class="item">
+                <text class="name">伞塔240g牛肉面调料</text>
+                <view class="msg">
+                    <text class="font1">264570</text>
+                    <text class="font1">1*9.99</text>
+                    <text class="font1">9.99</text>
+                </view>
+            </view>
+        </view>
+        <view class="part3">
+            <view class="col">
+                <text>购买数量：<text  class="font1">5</text></text>
+                <text>应付金额：<text  class="font1">47.00</text></text>
+            </view>
+            <view class="col">
+                <text>实收金额：<text class="font1">50.00</text></text>
+                <text>　　找零：<text class="font1">3.00</text></text>
+            </view>
+        </view>
+        <view class="part4">
+            <text>会员卡号：<text class="font1">DMIN8899*******</text></text>
+            <text>可用积分：<text class="font1">105</text></text>
+        </view>
+    </view>
+    <image src="../../images/bottom.png" class="bottom"></image>
+</view>

@@ -1,0 +1,17 @@
+<view class="warp">
+    <text class="title">订单信息</text>
+    <view class="order">
+        <view class="pic"><image src="{{serverSrc}}{{this_order.goods_pic}}"></image></view>
+        <view class="info">
+                    <text>{{this_order.goods_name}}　　×{{this_order.goods_num}}</text>
+                    <text>地址:{{this_order.address}}</text>
+                    <text>收货人:{{this_order.user}}　电话:{{this_order.phone}}</text>
+                    <!--<text>炫酷水被　　×3=28.50</text>
+                    <text>地址：安徽省合肥市蜀山区黄河路9090号</text>-->
+        </view>
+    </view>
+</view>
+<view class="price">
+    <text>总价:</text><text class="red">￥{{this_order.total_price}}</text>
+</view>
+<view class="btn"><button type="primary" bindtap="pay" >微信支付</button></view>

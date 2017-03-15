@@ -1,0 +1,54 @@
+<!--pages/profile/profile.wxml-->
+<view class="title border-tb">
+    <!--<image src="../../images/photo.png" class="head"></image>-->
+    <image src="{{userInfo.avatarUrl}}" class="head"></image>
+    <view class="info">
+        <!--<text class="name">萌萌哒~angle</text>
+        <text class="gender">女</text>-->
+        <text class="name">{{userInfo.nickName}}</text>
+        <text class="gender" wx:if="{{userInfo.gender==1}}">男</text>
+        <text class="gender" wx:if="{{userInfo.gender==0}}">未知</text>
+        <text class="gender" wx:if="{{userInfo.gender==2}}">女</text>
+    </view>
+</view>
+<view class="border-tb infos ">
+    <view class="names">
+        <view style="display:flex;flex-direction: row;">
+            <image src="../../images/name.png" class="icon"></image>
+            <text>昵称</text>
+        </view>
+        <!--<text class="font1">萌萌哒~angle</text>-->
+        <text class="font1">{{userInfo.nickName}}</text>
+    </view>
+    <view class="genders">
+        <view style="display:flex;flex-direction: row;">
+            <image src="../../images/gender.png" class="icon"></image>
+            <text>性别</text>
+        </view>     
+        <!--<text class="font1">女</text>-->
+        <text class="font1" wx:if="{{userInfo.gender==1}}">男</text>
+        <text class="font1" wx:if="{{userInfo.gender==0}}">未知</text>
+        <text class="font1" wx:if="{{userInfo.gender==2}}">女</text>
+    </view>
+</view>
+<navigator url="../history/history" class="row border-tb">
+        <view style="display:flex;flex-direction:row;align-items:center">
+            <image src="../../images/hsty.png" class="icon"></image>
+            <text>历史购物</text>
+        </view>     
+        <image src="../../images/right.png" class="jiantou"></image>
+</navigator>
+<navigator url="url" class="row border-tb">
+        <view style="display:flex;flex-direction: row;align-items:center">
+            <image src="../../images/other.png" class="icon"></image>
+            <text>替他人扫码记录</text>
+        </view>     
+        <image src="../../images/right.png" class="jiantou"></image>
+</navigator>
+<navigator url="../exchange/exchange" class="row border-tb">
+        <view style="display:flex;flex-direction: row;align-items:center">
+            <image src="../../images/integral.png" class="icon"></image>
+            <text>我的积分</text>
+        </view>     
+        <image src="../../images/right.png" class="jiantou"></image>
+</navigator>

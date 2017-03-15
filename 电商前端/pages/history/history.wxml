@@ -1,0 +1,61 @@
+<view>
+    <view class="item">
+        <view class="title">
+            <text>订单编号：3535456556666</text>
+            <text>2017-1-1　　12：00</text>
+        </view>
+        <view class="goods">
+            <view class="good">
+                <image src="../../images/gooded.png"></image>
+                <view class="info">
+                    <text class="name">有机食物大礼包</text>
+                    <text class="msg">500g　　春节大礼包</text>
+                </view>
+            </view>
+            <view class="good">
+                    <image src="../../images/gooded.png"></image>
+                    <view class="info">
+                        <text class="name">有机食物大礼包</text>
+                        <text class="msg">500g　　春节大礼包</text>
+                    </view>
+            </view>
+        </view>
+        <view class="total">
+            <text class="price">金额：<text class="font1">￥288.00</text></text>
+            <view class="btns">
+                <navigator url="../ticket/ticket" class="btn">电子小票</navigator>
+                <!--<text class="btn">电子小票</text>-->
+                <text class="btn">删除</text>
+            </view>
+        </view>    
+    </view>
+    <view class="item">
+        <view class="title">
+            <text>订单编号：3535456556666</text>
+            <text>2017-1-1　　12：00</text>
+        </view>
+        <view class="goods">
+            <view class="good">
+                <image src="../../images/gooded.png"></image>
+                <view class="info">
+                    <text class="name">有机食物大礼包</text>
+                    <text class="msg">500g　　春节大礼包</text>
+                </view>
+            </view>
+            <view class="good">
+                    <image src="../../images/gooded.png"></image>
+                    <view class="info">
+                        <text class="name">有机食物大礼包</text>
+                        <text class="msg">500g　　春节大礼包</text>
+                    </view>
+            </view>
+        </view>
+        <view class="total">
+            <text class="price">金额：<text class="font1">￥288.00</text></text>
+            <view class="btns">
+                <text class="btn">电子小票</text>
+                <text class="btn">删除</text>
+            </view>
+        </view>    
+    </view>
+</view>

@@ -1,0 +1,16 @@
+/* pages/profile/profile.wxss */
+page{background-color: #fafafa;font-size: 30rpx;}
+.border-tb{border-bottom: 2rpx #e1e1e1 solid;border-top:2rpx #e1e1e1 solid; }
+.title{margin-top: 35rpx;display: flex;flex-direction: row;padding: 16rpx 0 18rpx 26rpx;margin-bottom: 30rpx;} 
+.title .head{width: 94rpx;height: 94rpx;border-radius: 8rpx;margin-right: 24rpx;}
+.title .name{line-height: 50rpx;display: block; }
+.title .gender{color:#999999;line-height: 45rpx;}
+.icon{width: 40rpx;height: 40rpx;border-radius: 4rpx;margin-right: 20rpx;}
+.infos{padding-left:20rpx;line-height: 40rpx;margin-bottom: 45rpx;} 
+.font1{color: #999999}
+.infos .names{padding:20rpx 34rpx 24rpx 8rpx; border-bottom: 2rpx #e1e1e1 solid;line-height: 40rpx;}
+.infos .genders{padding:24rpx 34rpx 20rpx 8rpx;line-height: 40rpx;}
+.infos .names,.infos .genders{display:flex;flex-direction: row;justify-content: space-between}
+.row{display: flex;flex-direction: row;justify-content: space-between;padding:23rpx 30rpx 22rpx 27rpx;margin-bottom: 21rpx;}
+.row text{font-size: 32rpx;line-height: 40rpx;}
+.row .jiantou{width: 17rpx;height: 30rpx;}

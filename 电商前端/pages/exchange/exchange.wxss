@@ -1,0 +1,21 @@
+.header{padding: 43rpx 0 32rpx 25rpx;display: flex;flex-direction: row;align-items:center}
+.header image{width: 38rpx;height: 28rpx;margin-right: 17rpx;}
+.header .points{font-size: 30rpx;line-height: 36rpx;}
+.header .points .points_num{font-size:36rpx;color: #ffab18 }
+.bor{background-color: #fafafa;height:19rpx;border-bottom: 2rpx #e2e2e2 solid;border-top: 2rpx #e2e2e2 solid;}
+.list{display: flex;flex-direction: column;padding: 3rpx 25rpx 0;}
+.list .item{border-bottom:2rpx #e2e2e2 solid;padding-top: 25rpx;padding-bottom: 29rpx;display: flex;flex-direction:row}
+.list .item image{width:261rpx;height: 173rpx;margin-right: 32rpx;}
+.list .item .info{display: flex;flex-direction: column}
+.list .item .info .title{font-size: 36rpx;font-weight:500;margin-bottom: 30rpx;line-height:36rpx;}
+.list .item .info .price{font-size:28rpx;color: #ffab18;margin-bottom: 28rpx;line-height: 28rpx;}
+.list .item .info .btn{font-size: 28rpx;color: #31b245;border: 2rpx #31b245 solid;border-radius:24rpx;height: 48rpx;width: 150rpx;text-align: center;line-height: 48rpx;}
+page{position: relative}
+.modal{background-color:rgba(0,0,0, 0.4);position: fixed;top: 0;left: 0; }
+.modal .box{width: 540rpx;height: 360rpx;margin: 238rpx auto 0;background-color: #ffffff;border-radius: 15rpx;}
+.modal .box{font-size: 36rpx; }
+.modal .box .txt{display: block;text-align: center;line-height: 214rpx;border-bottom: 2rpx #d1d1d1 solid;padding-bottom: 30rpx;}
+.modal .box .btns{display: flex;flex-direction: row;justify-content: space-around;margin-top: 27rpx;}
+.modal .box .btns text{width:180rpx;height: 60rpx;border-radius: 26rpx;text-align: center;color: #ffffff;line-height: 60rpx;font-size: 28rpx;font-weight: bold}
+.modal .box .btns .del{background-color: #f5ad00;}
+.modal .box .btns .confirm{background-color:#10ac2d;}

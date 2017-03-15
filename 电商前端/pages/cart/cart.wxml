@@ -1,0 +1,33 @@
+<!--pages/cart/cart.wxml-->
+<text class="order-number brder-b">订单编号：32133455646</text>
+<view class="total brder-b">
+    <image src="../../images/computer.png"></image>
+    <view class="info">
+        <text>数量：<text class="font1">{{total_nums}}件</text></text>
+        <text>合计：<text class="font2">￥{{total}}</text></text>
+    </view>
+</view>
+<view class="btns">
+    <text class="del">取消</text>
+    <text class="make">生成二维码</text>
+    <text class="pay" bindtap="pay">付款</text>
+</view>
+<scroll-view class="lists">
+    <view class="item" wx:for="{{goods}}">
+        <image src="../../images/good.png" class="pic"></image>
+        <view class="msg">
+            <text class="name">{{item.name}}</text>
+            <text class="txt">500g　春节喜庆大礼包</text>
+            <text class="price">￥{{item.price}}</text>
+            <view class="toggle">
+                <view class="btn" bindtap="min" data-index="{{index}}">
+                    <image src="../../images/min.png" class="min"  ></image>
+                </view>
+                <view class="nums">{{item.num}}</view>
+                <view class="btn" bindtap="add" data-index="{{index}}">
+                    <image src="../../images/add.png" class="add"  ></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view> 

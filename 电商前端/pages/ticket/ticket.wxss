@@ -1,0 +1,20 @@
+page{display: flex;flex-direction: column;background-color:#fafafa;}
+.header {width: 100%;display: flex;border-bottom:2rpx #e2e2e2 solid;margin-bottom: 20rpx;background-color: #ffffff}
+.header image{width:205rpx;height:40rpx;margin:35rpx auto;}
+.content{display: flex;flex-direction: column;align-items: center;font-size: 28rpx;}
+.content .top{width: 710rpx; height: 26rpx;}
+.content .info{width: 665rpx;padding:15rpx 8rpx 0;background-color: #ffffff;margin-top: -15rpx;box-shadow: 0 10rpx 14rpx #ececec}
+.content .font1{color: #999999}
+.content .info .part1{padding:0 38rpx 8rpx 28rpx;display: flex;flex-direction: column;border-bottom: 2rpx #000000 dashed }
+.content .info .part1 .title{font-size: 35rpx;font-weight: bold;text-align: center;line-height: 47rpx;}
+.content .info .part1 .col{line-height: 40rpx;}
+.content .info .part1 .data{margin-top: 15rpx;}
+.content .info .part1 .msg{display: flex;flex-direction: row;justify-content: space-between;}
+.content .info .part2{display: flex;flex-direction: column;padding:30rpx 38rpx 0 28rpx;border-bottom: 2rpx #000000 dashed }
+.content .info .part2 .item{margin-bottom: 30rpx;}
+.content .info .part2 .item .name{font-weight:400;margin-bottom: 15rpx;}
+.content .info .part2 .item .msg{display: flex;flex-direction: row;justify-content: space-between}
+.content .info .part3{padding: 15rpx 37rpx;line-height: 47rpx;border-bottom: 2rpx #000000 dashed }
+.content .info .part3 .col{display: flex;flex-direction: row;justify-content: space-between}
+.content .info .part4{display: flex;flex-direction: column;padding: 17rpx 37rpx 33rpx;line-height: 44rpx;}
+.content .bottom{width:665rpx;height: 21rpx;}
