@@ -12,7 +12,7 @@ page{display: flex;flex-direction: column }
 .btns .make{width:190rpx;height: 68rpx;background-color:#9b9b9b;color:#ffffff;border-radius: 4rpx;margin-right:17rpx;}
 .btns .pay{width:160rpx;height: 68rpx;background-color: #28d148;color:#ffffff;border-radius: 4rpx;}
 .lists{background-color:#fafafa;padding-top: 22rpx}
-.lists .item{background-color:#fff;padding: 30rpx 20rpx;margin-bottom:24rpx;border-bottom: 2rpx #f1f1f1 solid;display: flex;flex-direction: row;padding-bottom: 0;}
+.lists .item{background-color:#fff;padding: 30rpx 20rpx;margin-bottom:24rpx;border-bottom: 2rpx #f1f1f1 solid;display: flex;flex-direction: row;}
 .lists .item .pic{width: 142rpx;height: 143rpx;margin-right: 20rpx;}
 .lists .item .msg{display: flex;flex-direction: column;flex: 1;}
 .lists .item .msg text{display: block;}

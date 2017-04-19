@@ -19,14 +19,14 @@
             <text class="name">{{item.name}}</text>
             <text class="txt">500g　春节喜庆大礼包</text>
             <text class="price">￥{{item.price}}</text>
-            <view class="toggle">
-                <view class="btn" bindtap="min" data-index="{{index}}">
-                    <image src="../../images/min.png" class="min"  ></image>
-                </view>
-                <view class="nums">{{item.num}}</view>
-                <view class="btn" bindtap="add" data-index="{{index}}">
-                    <image src="../../images/add.png" class="add"  ></image>
-                </view>
+        </view>
+        <view class="toggle">
+            <view class="btn" bindtap="min" data-index="{{index}}">
+                <image src="../../images/min.png" class="min"  ></image>
+            </view>
+            <view class="nums">{{item.num}}</view>
+            <view class="btn" bindtap="add" data-index="{{index}}">
+                <image src="../../images/add.png" class="add"  ></image>
             </view>
         </view>
     </view>
